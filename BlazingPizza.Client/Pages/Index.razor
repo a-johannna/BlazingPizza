@@ -4,17 +4,15 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JS
 
-@*<div class="nav-buttons">
-    <button class="dark-mode-toggle" @onclick="ToggleDarkMode">🌙 Dark Mode</button>
-</div>*@
+@*CascadingParameter] public string? searchQuery { get; set; } = "";*@
 
-@*@<button class="dark-mode-toggle" @onclick="ToggleDarkMode">Toggle Dark Mode</button>*@
 
 <div class="main">
     <ul class="pizza-cards">
         @if (specials is not null)
         {
-            @foreach (var special in specials)
+            @foreach (var special in specials.Where(s => string.IsNullOrWhiteSpace(searchQuery) || 
+                                                        s.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)))
             {
                 <li @onclick="@(() => OrderState.ShowConfigurePizzaDialog(special))" style="background-image: url('@special.ImageUrl')">
                     <div class="pizza-info">
@@ -64,7 +62,15 @@
 @code {
     List<PizzaSpecial>? specials;
     Order Order => OrderState.Order;
+    string searchQuery = "";
+
     bool isDarkMode = false;
+
+       // Lista filtrada
+    IEnumerable<PizzaSpecial> filteredSpecials => 
+        string.IsNullOrWhiteSpace(searchQuery) 
+        ? specials ?? new List<PizzaSpecial>() 
+        : specials?.Where(s => s.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) ?? new List<PizzaSpecial>();
 
     protected override async Task OnInitializedAsync()
     {

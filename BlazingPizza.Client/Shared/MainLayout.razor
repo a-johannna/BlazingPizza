@@ -2,6 +2,8 @@
 
 @inherits LayoutComponentBase
 
+
+<CascadingValue Value="searchQuery" IsFixed="true">
 <div class="top-bar">
     <a class="logo" href="">
         <img src="img/logo.svg" />
@@ -19,20 +21,33 @@
         </NavLink>
     </AuthorizeView>
 
+
+
+
     <!-- Botón de Modo Oscuro dentro de la barra de navegación -->
     <div class="nav-buttons">
+        <input type="text" class="search-bar" placeholder="Search ice creams..." @bind="searchQuery" />
         <button class="dark-mode-toggle" @onclick="ToggleDarkMode">Dark Mode</button>
-    </div> 
+    </div>
+
+
 
     <LoginDisplay />
 </div>
 
+
 <div class="content">
+     @*@<CascadingValue Value="searchQuery">*@
     @Body
+    @*@</CascadingValue>*@
 </div>
+</CascadingValue>
+
+@*Función que establece el modo oscuro*@
 
 @code {
     bool isDarkMode = false;
+ 
 
     async Task ToggleDarkMode()
     {
@@ -40,3 +55,8 @@
         await JS.InvokeVoidAsync("toggleDarkMode", isDarkMode);
     }
 }
+
+@code {
+    string searchQuery = "";
+}
+

@@ -253,7 +253,7 @@ form {
     }
 
         .order-total .total-price::before {
-            content: '£';
+            content: '€'; /*Simbolo euro en la lista de toppings*/
             font-weight: 300;
             margin: 0 0.1rem 0 0.4rem;
         }
@@ -280,6 +280,7 @@ form {
     font-weight: 100;
     margin-top: 1rem;
     position: relative;
+
 }
 
     .cart-item .title {
@@ -428,6 +429,7 @@ form {
     .dialog-body input, .dialog-body select {
         flex-grow: 1;
         width: unset;
+
     }
 
     .dialog-body .size-label {
@@ -454,11 +456,12 @@ form {
 .dialog .topping-price {
     font-weight: 100;
     font-size: 0.8rem;
+
 }
 
-.dialog .topping-price::before {
-    content: '£';
-}
+    .dialog .topping-price::before {
+        content: '€';  /*Símbolo euro del topping seleccionado*/
+    }
 
 .btn-success {
     background-color: #FF9A8B !important; /* botón order */
@@ -771,19 +774,31 @@ input[type=range] {
     }
 }
 
+/*Botón modo oscuro*/
 .dark-mode-toggle {
-    background-color: deeppink; /* Color por defecto */
+
+    background: none;
+    border: 1.5px solid white;
+    border-radius: 0.7em;
     color: white;
-    border: none;
-    padding: 10px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.8rem 0.1rem 0.8rem;
+    font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+    font-weight: 100;
     cursor: pointer;
-    border-radius: 5px;
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: bold;
+    transition: 0.2s ease-out;
+    margin-left: 9px;
+    margin-top: 20px;
+
 }
+
+    .dark-mode-toggle:hover {
+        background-color: rgba(255,255,255,0.3);
+        color: #fff2cc;
+        border-color: white;
+        border: 2px dotted;
+    }
+    
 
     /* Icono de sol por defecto */
     .dark-mode-toggle::before {
@@ -801,7 +816,7 @@ input[type=range] {
     }
 
 /* Cambios en los colores del fondo en modo oscuro */
-.dark-mode .top-bar,
+
 .dark-mode body,
 .dark-mode .content,
 .dark-mode .main,
@@ -809,3 +824,26 @@ input[type=range] {
 .dark-mode .sidebar {
     background-color: #000000;
 }
+
+.dark-mode .top-bar {
+    background-color: #444;
+}
+
+
+.search-bar {
+    padding: 8px;
+    border-radius: 0.7em;
+    border: 1px solid white;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+    .search-bar:focus {
+        outline: none;
+        width: 250px; /* Se expande al escribir */
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
