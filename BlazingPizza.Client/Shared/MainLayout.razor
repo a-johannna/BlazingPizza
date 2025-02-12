@@ -1,4 +1,6 @@
-﻿@inherits LayoutComponentBase
+﻿@inject IJSRuntime JS
+
+@inherits LayoutComponentBase
 
 <div class="top-bar">
     <a class="logo" href="">
@@ -17,9 +19,24 @@
         </NavLink>
     </AuthorizeView>
 
+    <!-- Botón de Modo Oscuro dentro de la barra de navegación -->
+    <div class="nav-buttons">
+        <button class="dark-mode-toggle" @onclick="ToggleDarkMode">Dark Mode</button>
+    </div> 
+
     <LoginDisplay />
 </div>
 
 <div class="content">
     @Body
 </div>
+
+@code {
+    bool isDarkMode = false;
+
+    async Task ToggleDarkMode()
+    {
+        isDarkMode = !isDarkMode;
+        await JS.InvokeVoidAsync("toggleDarkMode", isDarkMode);
+    }
+}

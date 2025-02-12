@@ -4,6 +4,12 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JS
 
+@*<div class="nav-buttons">
+    <button class="dark-mode-toggle" @onclick="ToggleDarkMode">🌙 Dark Mode</button>
+</div>*@
+
+@*@<button class="dark-mode-toggle" @onclick="ToggleDarkMode">Toggle Dark Mode</button>*@
+
 <div class="main">
     <ul class="pizza-cards">
         @if (specials is not null)
@@ -58,6 +64,7 @@
 @code {
     List<PizzaSpecial>? specials;
     Order Order => OrderState.Order;
+    bool isDarkMode = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -71,4 +78,10 @@
             OrderState.RemoveConfiguredPizza(configuredPizza);
         }
     }
+
+   @* async Task ToggleDarkMode()
+    {
+        isDarkMode = !isDarkMode;
+        await JS.InvokeVoidAsync("toggleDarkMode", isDarkMode);
+    }*@
 }

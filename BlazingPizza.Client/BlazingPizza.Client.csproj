@@ -26,4 +26,11 @@
 		<ProjectReference Include="..\BlazingPizza.Shared\BlazingPizza.Shared.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Content Update="wwwroot\img\logo.svg">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
 </Project>
