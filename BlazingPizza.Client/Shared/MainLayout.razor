@@ -1,5 +1,4 @@
 ﻿@inject IJSRuntime JS
-
 @inherits LayoutComponentBase
 
 
@@ -18,7 +17,7 @@
         <NavLink href="myorders" class="nav-tab">
             <img src="img/bike.svg" />
             <div>My Orders</div>
-        </NavLink>
+        </NavLink>  
     </AuthorizeView>
 
 
@@ -31,15 +30,13 @@
     </div>
 
 
-
     <LoginDisplay />
 </div>
 
 
 <div class="content">
-     @*@<CascadingValue Value="searchQuery">*@
     @Body
-    @*@</CascadingValue>*@
+
 </div>
 </CascadingValue>
 

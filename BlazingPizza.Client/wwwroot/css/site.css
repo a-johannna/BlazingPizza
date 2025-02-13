@@ -49,7 +49,7 @@ form {
     display: flex;
     height: 100vh;
     z-index: 1;
-    background-color: #FAF3DD;
+    background-color: #FAF3DD; /*Fondo del pagina principal*/
 }
 
 .main {
@@ -386,7 +386,7 @@ form {
 }
 
 .dialog-title {
-    background-color: deeppink;
+    background-color: deeppink; /*Color del fondo del titulo del diálogo*/
     color: #fff2cc;
     padding: 1.3rem 2rem;
 }
@@ -829,6 +829,7 @@ input[type=range] {
     background-color: #444;
 }
 
+/*Barra de búsqueda*/
 
 .search-bar {
     padding: 8px;
