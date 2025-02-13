@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     font-family: 'quicksand';
     overflow-y: hidden;
-    background-color: #FAF3DD;
+    background-color: deeppink;
 }
 
 form {
