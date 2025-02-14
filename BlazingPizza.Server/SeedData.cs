@@ -8,114 +8,65 @@ public static class SeedData
         {
             new Topping()
             {
-                    Name = "Extra cheese",
-                    Price = 2.50m,
+                    Name = "Chocolate líquido",
+                    Price = 1.00m,
             },
             new Topping()
             {
-                    Name = "American bacon",
-                    Price = 2.99m,
+                    Name = "Caramelo derretido",
+                    Price = 0.90m,
             },
             new Topping()
             {
-                    Name = "British bacon",
-                    Price = 2.99m,
+                    Name = "Galletas de Oreo trituradas",
+                    Price = 1.10m,
             },
             new Topping()
             {
-                    Name = "Canadian bacon",
-                    Price = 2.99m,
+                    Name = "Trozos de brownie",
+                    Price = 2.60m,
             },
             new Topping()
             {
-                    Name = "Tea and crumpets",
-                    Price = 5.00m
+                    Name = "M&M's",
+                    Price = 1.25m,
             },
             new Topping()
             {
-                    Name = "Fresh-baked scones",
+                    Name = "Malvaviscos pequeños",
                     Price = 4.50m,
             },
             new Topping()
             {
-                    Name = "Bell peppers",
-                    Price = 1.00m,
+                    Name = "Mango en cubitos",
+                    Price = 1.10m,
             },
             new Topping()
             {
-                    Name = "Onions",
-                    Price = 1.00m,
+                    Name = "Piña picada",
+                    Price = 0.99m,
             },
             new Topping()
             {
-                    Name = "Mushrooms",
-                    Price = 1.00m,
+                    Name = "Pistachos picados",
+                    Price = 1.15m,
             },
             new Topping()
             {
-                    Name = "Pepperoni",
-                    Price = 1.00m,
+                    Name = "Chispas de menta",
+                    Price = 0.75m,
             },
             new Topping()
             {
-                    Name = "Duck sausage",
-                    Price = 3.20m,
+                    Name = "Ron con pasas",
+                    Price = 1.95m,
             },
             new Topping()
             {
-                    Name = "Venison meatballs",
+                    Name = "Licor de café",
                     Price = 2.50m,
             },
-            new Topping()
-            {
-                    Name = "Served on a silver platter",
-                    Price = 250.99m,
-            },
-            new Topping()
-            {
-                    Name = "Lobster on top",
-                    Price = 64.50m,
-            },
-            new Topping()
-            {
-                    Name = "Sturgeon caviar",
-                    Price = 101.75m,
-            },
-            new Topping()
-            {
-                    Name = "Artichoke hearts",
-                    Price = 3.40m,
-            },
-            new Topping()
-            {
-                    Name = "Fresh tomatoes",
-                    Price = 1.50m,
-            },
-            new Topping()
-            {
-                    Name = "Basil",
-                    Price = 1.50m,
-            },
-            new Topping()
-            {
-                    Name = "Steak (medium-rare)",
-                    Price = 8.50m,
-            },
-            new Topping()
-            {
-                    Name = "Blazing hot peppers",
-                    Price = 4.20m,
-            },
-            new Topping()
-            {
-                    Name = "Buffalo chicken",
-                    Price = 5.00m,
-            },
-            new Topping()
-            {
-                    Name = "Blue cheese",
-                    Price = 2.50m,
-            },
+          
         };
 
         var specials = new PizzaSpecial[]
