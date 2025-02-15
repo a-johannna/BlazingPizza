@@ -827,9 +827,22 @@ input[type=range] {
     background-color: #000000;
 }
 
-.dark-mode .top-bar {
+.dark-mode .top-bar{
     background-color: #444;
 }
+.dark-mode .dialog-buttons {
+    background-color: #444;
+    color:white;
+}
+
+.dark-mode .order-total {
+    background-color: #000000; 
+    color: white;
+}
+.dark-mode .dialog-title {
+    background-color: #000000; 
+}
+
 
 /*Barra de búsqueda*/
 
